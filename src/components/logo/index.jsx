@@ -5,8 +5,6 @@ import { theme } from "../../theme";
 const LogoContaienr = styled.div`
     display: felx;
     flex-direction: column;
-    width: 457px;
-    height: 127px;
     
     display: flex;
     justify-content: center;
