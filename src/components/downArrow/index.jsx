@@ -1,18 +1,22 @@
 import React from "react";
 import styled from "styled-components";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faAngleDown } from "@fortawesome/free-solid-svg-icons"
+import LongArrowDown from "../../assets/illustrations/longArrow.svg";
 
 const ArrowIcon = styled.div`
     color: white;
-    font-size: 100px;
+    font-size: 25px;
     position: absolute;
-    bottom: 1%;
-    left: 10%;
+    bottom: 8%;
+    left: 8.45%;
+
+    &: hover {
+        color: black;
+        cursor: pointer;
+    }
 `
 
 export function DownArrow() {
     return <ArrowIcon>
-        <FontAwesomeIcon icon={faAngleDown} /> 
-    </ArrowIcon>;
+        <img src={LongArrowDown} height={23} alt="Long arrow down" />
+        </ArrowIcon>;
 }

@@ -2,12 +2,11 @@ import React from "react";
 import styled from "styled-components";
 
 import BackgroundImg from "../../assets/pictures/background.jpg";
-import { Logo } from "../../components/logo";
-import { Marginer} from "../../components/marginer/index.jsx"
 import { theme } from "../../theme";
-import { ReservationButton } from "../../components/reservationButton";
+import { Navbar } from "../../components/navbar";
 import { DownArrow } from "../../components/downArrow";
-// import Hamburger from "../../assets/illusrations/hamburger"
+
+
 
 const TopContainer = styled.div`
     width: 100%;
@@ -15,18 +14,14 @@ const TopContainer = styled.div`
     padding: 0;
     background-image: url(${BackgroundImg});
     background-size: cover;
-    position: relative;
+    // position: absolute;
 `; 
 
 const BackgroundFilter = styled.div`
     width: 100%;
     height: 100%;
     // background-image: linear-gradient(360deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
-
-    display: flex;
-    flex-direction: column;
-    // align-items: center;
-
+    position: absolute;
 `;
 
 const GreetingText = styled.h1`
@@ -55,7 +50,6 @@ const ScrollPrompt = styled.div`
     width: 227px;
     height: 34px;
 
-    // color: ${theme.primary};
     color: white;
     font-family: Lato;
     font-style: normal;
@@ -68,27 +62,16 @@ const ScrollPrompt = styled.div`
 
 `
 
-const HamburgerContainer = styled.img`
-  width: 8em;
-  height: 8em;
-  background-color: black;
-  `;
-
-
 export function TopSection(props) {
-    return <TopContainer>
+    return <TopContainer> 
         <BackgroundFilter>
-            <Marginer direction="vertical" margin="3em" />
-            <Logo />
-            <ReservationButton>RESERVATION</ReservationButton>
-
-            {/* <HamburgerContainer src={hamburger} inline={inline} small={small}/> */}
+            <Navbar />
 
             <GreetingText>Welcome to <br />  the Ore Mountains</GreetingText> 
             <ScrollPrompt>Scroll down</ScrollPrompt>
             
-
-            {/* <DownArrow /> */}
+            <DownArrow />
+            {/* <LongDownArrow /> */}
 
         </BackgroundFilter>
     </TopContainer>;
