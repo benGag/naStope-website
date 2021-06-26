@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { TopSection } from "./topSection";
+import { SectionSpa } from "./sectionSpa";
 
 const PageContainer = styled.div`
     width: 100%;
@@ -10,7 +11,10 @@ const PageContainer = styled.div`
 `;
 
 export function Homepage(props) {
-    return <PageContainer>
-        <TopSection />
-    </PageContainer>
+    return (
+        <PageContainer>
+            <TopSection />
+            <SectionSpa />
+        </PageContainer>
+    );
 }

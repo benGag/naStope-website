@@ -13,8 +13,9 @@ const HamburgerWrapper = styled.div`
   position: relative;
   margin: 0;
 
+
   &:hover {
-    fill; black;
+    fill: black;
     cursor: pointer;
     // background-color: rgba(255,255,255,0.15);
   }

@@ -5,8 +5,7 @@ import BackgroundImg from "../../assets/pictures/background.jpg";
 import { theme } from "../../theme";
 import { Navbar } from "../../components/navbar";
 import { DownArrow } from "../../components/downArrow";
-
-
+import { Element, scroller } from "react-scroll";
 
 const TopContainer = styled.div`
     width: 100%;
@@ -14,7 +13,6 @@ const TopContainer = styled.div`
     padding: 0;
     background-image: url(${BackgroundImg});
     background-size: cover;
-    // position: absolute;
 `; 
 
 const BackgroundFilter = styled.div`
@@ -60,19 +58,39 @@ const ScrollPrompt = styled.div`
     align-items: center;
     letter-spacing: 0.13em;
 
-`
+`;
+
+const DownArrowWrapper = styled.div`
+    position: absolute;
+    bottom: 8%;
+    left: 8.45%;
+
+    &: hover {
+        color: black;
+        cursor: pointer;
+    }
+`;
 
 export function TopSection(props) {
-    return <TopContainer> 
-        <BackgroundFilter>
-            <Navbar />
 
-            <GreetingText>Welcome to <br />  the Ore Mountains</GreetingText> 
-            <ScrollPrompt>Scroll down</ScrollPrompt>
-            
-            <DownArrow />
-            {/* <LongDownArrow /> */}
+    const scrollToNextSection = () => {
+        scroller.scrollTo("sectionSpa", {smooth: true, duration: 1500});
+    };
 
-        </BackgroundFilter>
-    </TopContainer>;
+    return (
+    <Element name="topSection">
+        <TopContainer> 
+            <BackgroundFilter>
+                <Navbar />
+
+                <GreetingText>Welcome to <br />  the Ore Mountains</GreetingText> 
+                <ScrollPrompt>Scroll down</ScrollPrompt>
+                <DownArrowWrapper onClick={scrollToNextSection}>
+                    <DownArrow />
+                </DownArrowWrapper>
+                
+            </BackgroundFilter>
+        </TopContainer>
+    </Element>
+    );
 }

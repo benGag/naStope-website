@@ -1,19 +1,18 @@
 import React from "react";
 import styled from "styled-components";
-import { theme } from "../../theme";
 
 const ButtonWrapper = styled.button`
     position: absolute;
-    right: 6%;
-    top: 53px;
+    left: 0;
+    bottom: 0;
 
     background-color: Transparent;
-    color: ${theme.primary};
+    color: #646464;
 
-    width: 147px;
-    height: 42px;
+    width: 162px;
+    height: 64px;
 
-    border: 0.5px solid #FFFFFF;
+    border: 0.5px solid #646464;
     box-sizing: border-box;
 
     font-family: Lato;
@@ -28,7 +27,7 @@ const ButtonWrapper = styled.button`
     padding: 0;
 
     &:hover {
-        background-color: rgba(255,255,255,0.15);
+        background-color: rgba(0,0,0,0.05);
         cursor: pointer;
     }
 
@@ -37,6 +36,6 @@ const ButtonWrapper = styled.button`
     }
 `;
 
-export function ReservationButton(props) {
+export function Button(props) {
     return <ButtonWrapper {... props}>{ props.children }</ButtonWrapper>;
 }
