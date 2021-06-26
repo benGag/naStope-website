@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { Element } from "react-scroll";
 
+import { Element } from "react-scroll";
 import { SectionTitle } from "../../components/sectionTitle";
 import { Text } from "../../components/text";
 import { Button } from "../../components/button";
@@ -11,7 +11,7 @@ import Gym from "../../assets/pictures/gym.jpg";
 
 const SectionSpaContainer = styled(Element)`
     width: 100%;
-    min-height: 1430px;
+    min-height: 1450px;
     position: relative;
 `;
 
@@ -54,6 +54,7 @@ const Banner = styled.div`
     font-weight: normal;
     font-size: 44px;
     line-height: 60px;
+    
     display: flex;
     align-items: center;
     text-align: center;
